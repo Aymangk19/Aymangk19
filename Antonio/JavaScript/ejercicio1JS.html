@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 JavaScrtip</title>
+</head>
+<body>
+
+    <p id="texto"></p>
+    <input type="button" value="A rojo" onclick="funcion1()"/>
+    <input type="button" value="A verde" onclick="funcion2()"/>
+    <input type="button" value="A azul" onclick="funcion3()"/>
+    <script>
+       document.getElementById("texto").innerHTML = "Soy un texto que cambia de color"
+
+        function funcion1() {
+            document.getElementById("texto").style.color = "red";
+        }
+        function funcion2() {
+            document.getElementById("texto").style.color = "green";
+        }
+        function funcion3() {
+            document.getElementById("texto").style.color = "blue";
+        }
+    </script>
+    
+</body>
+</html>

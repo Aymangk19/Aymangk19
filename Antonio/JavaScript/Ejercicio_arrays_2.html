@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let texto = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur!Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe soyunapalabraescondida incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus reiciendis nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quisquam temporibus patata nulla," +
+            "sed dicta nihil eligendi deserunt vitae culpa facilis? Distinctio cum commodi saepe recusandae incidunt" +
+            "enim ipsa pariatur!";
+
+        let totalA = 0;
+        let totalE = 0;
+        let totalI = 0;
+        let totalO = 0;
+        let totalU = 0;
+        let palabraLarga = "";
+        for (let i = 0; i < texto; i++) {
+            //contando vocales
+            switch (texto.toLowerCase().charAt(i)) {
+                case 'a':
+                    totalA++;
+                    break;
+                case 'e':
+                    totalE++;
+                    break;
+                case 'i':
+                    totalI++;
+                    break;
+                case 'o':
+                    totalO++;
+                    break;
+                case 'u':
+                    totalU++;
+                    break;
+            }
+        }
+        let textoArray = texto.split("")
+        let palabraCorta = textoArray[0]
+        for (let i = 0; i < textoArray.length; i++) {
+            //comprobando palabra larga
+            if (textoArray[i].length > palabraLarga) {
+                palabraLarga = textoArray[i]
+            }
+
+            //comprobando palabra corta
+            if (textoArray[i].length > palabraCorta) {
+                palabraCorta = textoArray[i];
+            }
+        }
+        alert(texto.indexOf("patata"));
+    </script>
+</body>
+
+</html>

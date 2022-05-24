@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+
+		*{
+			box-sizing: border-box;
+		}
+
+		#textocomodin {
+			color: red;
+		}
+
+		.rojo {
+			color: red;
+			background-color: white;
+		}
+		.azul{
+			color: #000ff2;
+			background-color: white;
+		}
+
+		body{
+			background-color: #F0F8FF;
+		}
+
+		div.caja {
+			background-color: black;
+		}
+
+		div.cajaImagen {
+			background-image: url(../../Imagenes/CM.png);
+			width: 300px;
+			height: 300px;
+			border-style: dashed;
+			border-width: 10px;
+			border-color: to;
+			border-top-style: dotted;
+		}
+
+		div.pruebamargin{
+			border-style: solid;
+			padding: 20px;
+			margin: 20px;
+			margin: auto;
+			width: 100px;
+		}
+
+		div.pruebastexto{
+			text-align: center;
+			text-decoration: underline;
+		}
+
+		div.pruebastexto2{
+			text-align: right;
+			text-decoration: overline;
+		}
+
+		div.pruebastexto3{
+			text-align: left;
+			text-decoration: line-through;
+		}
+
+		div.pruebastexto4{
+			text-align: center;
+			text-decoration: underline overline;
+			text-decoration-style: wavy;
+			text-decoration-color: rgba(255, 0, 0,0.2);
+		}
+
+		div.pruebastexto5{
+			text-align: center;
+			font-family: Arial;
+			font-size: 40px;
+			font-style: italic;
+			font-weight: bold;
+			
+		}
+
+		table,tr,td,th{ /* tambien puedo agrupar todos los atributos de border poniendo:  border: 1px solid black;*/
+			border-width: 1px;
+			border-style: solid;
+			border-color: black;
+			border-collapse: collapse;	
+			padding: 20px;
+		}
+
+		th{
+			background-color: lightgray;
+		}
+
+		tr:nth-child(even){
+			background-color: aqua;
+		}/* seguun si quiero aplicar a las filas pares(even) o impares(odd)*/
+
+		tr:nth-child(odd){
+			background-color: lime;
+		}
+		tr:hover{
+			background-color: green;
+		}
+
+		.cajaover{
+			border: 1px solid black;
+			width: 150px;
+			height: 150px;
+			overflow-x: scroll;
+			overflow-y: auto;
+		}
+
+		a:visited{
+			color: orange;
+		}
+
+		a:link{
+			color: brown;
+		}
+
+		a:hover{
+			color: green;
+		}
+
+		p.pselementos::first-letter{
+			font-size: 30px;
+			color: red;
+		}
+
+		p.pselementos::first-line{
+			font-style: italic;
+		}
+
+		p::before{
+			content:"Voy antes";
+		}
+		p::after{
+			content:"Voy despues";
+		}
+
+		p::selection{
+			background-color: red;
+		}
+
+		.cajabsize{
+			width: 350px;
+			height: 150px;
+			border: 1px solid blue;
+		}
+
+		.cajabsize2{
+			width: 350px;
+			height: 150px;
+			padding: 50px;
+			border: 1px solid red;
+		}
+
+		.cajaf1{
+			background-color: aqua;
+			float: left;
+			padding: 10px;
+		}
+
+		.cajaf2{
+			background-color: lime;
+			float: left;
+			padding: 10px;
+		}
+
+		.cajaf3{
+			background-color: tomato;
+			float: right;
+			padding: 10px;
+		}
+
+		a{
+			display: block;
+		}
+
+		li{
+			display: inline;
+		}
+
+		.contenedor{
+			width: 500px;
+			height: 200px;
+			border: 1px black solid;
+			visibility: ;
+			position: relative;
+		}
+
+		.pruebasposition{
+			position: sticky;
+			top: 0px;
+			background-color: greenyellow;
+			padding: 15px;
+		}
+
+		.pruebasabsolute{
+			position: absolute;
+			right: 50px;
+		}
+
+		a[target="_blank"]{
+			background-color: black;
+		}
+
+		@media screen and (max-width: 600px) {
+			body {
+				background-color: darkred;
+			}
+
+			p{
+				font-size: 40px;
+			}
+		}
+
+		.opacidad{
+			opacity: 0.5;
+		}
+
+		.opacidad2{
+			padding: 20px;
+			background-color: rgba(0, 255, 0, 0.5);
+		}
+
+		.filtro{
+			filter: saturate(800%);
+		}
+
+		.adaptar{
+			width: 300px;
+			height: 600px;
+			object-fit: cover;
+			object-position: 0% 100%;
+		}
+
+
+		@keyframes cambiaColor{
+			0%{background-color: red; left: 0;}
+			50%{background-color: yellow;}
+			65%{left: 150px;transform: translate(100px,20px);}
+			100%{background-color: blue; left: 150px;}
+
+		}
+
+		.animacion1{
+			height: 100px;
+			width: 100px;
+			background-color: darkred;
+			animation-name: cambiaColor;
+			animation-iteration-count: infinite;
+			animation-direction: alternate-reverse;
+			animation-duration: 3s;
+			animation-delay: 0s;
+			animation-timing-function: ease-in-out;
+			animation-fill-mode: forwards;
+			position: relative;
+		}
+
+		.transaccion1{
+			height: 100px;
+			width: 100px;
+			background-color: steelblue;
+			transition: width 2s, background-color 3s;
+			transform: rotate(45deg);
+			transform: skew(45deg,20deg);
+
+		}
+		.transaccion1:hover{
+			width: 200px;
+			background-color: lime;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<p id="textocomodin">
+		Soy texto comodín
+	</p>
+
+	<p class="rojo">
+		Soy un texto rojo
+	</p>
+
+	<p class="azul">
+		Soy un texto azul
+	</p>
+
+	<div class="caja">
+		bgvalibvairbva
+	</div>
+
+	<div class="cajaImagen">
+		
+	</div>
+
+	<div class="pruebamargin">
+		Texto de prueba
+	</div><br>
+
+	<div class="pruebastexto">
+		Texto de prueba
+	</div><br>
+
+	<div class="pruebastexto2">
+		Texto de prueba
+	</div><br>
+
+	<div class="pruebastexto3">
+		Texto de prueba
+	</div><br>
+
+	<div class="pruebastexto4">
+		Texto de prueba
+	</div><br>
+
+	<div class="pruebastexto5">
+		Texto de prueba
+	</div><br>
+
+	<table>
+		<tr>
+			<th> Nombre</th>
+			<th>Apellidos</th>
+		</tr>
+		<tr>
+			<td>Armando</td>
+			<td>Guerra</td>
+		</tr>
+		<tr>
+			<td>Armando</td>
+			<td>Guerra</td>
+		</tr>
+		<tr>
+			<td>Armando</td>
+			<td>Guerra</td>
+		</tr>
+		<tr>
+			<td>Armando</td>
+			<td>Guerra</td>
+		</tr>
+	</table><br>
+
+	<header>
+		<!-- Todo lo que vaya aquí es la cabecera-->
+	</header>
+
+	<nav>
+		<!--Aquí va el menu con los enlaces que nos permite movernos por nuestra paágina-->
+	</nav>
+
+	<main>
+		<!--Aquí va el contenido principal de la página-->
+	</main>
+
+	<aside>
+		<!--Contenido que va a los lados de la pagina-->
+	</aside>
+
+	<footer>
+		<!-- Aquí va el pie de página donde suele ir información del creador, el copyrighty las redes sociales y contactos-->
+	</footer>
+
+	<div class="cajaover">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+
+	<a href="#">Soy un enlace</a><br>
+	<a href="www.google.es">Soy un enlace</a><br>
+
+	<p class="pselementos">Hola buenas tardes soy un parrafo</p>
+	<p class="pselementos">Hola soy otro parrafo</p><br>
+
+	<div class="cajabsize">
+		Caja 1
+	</div>
+		<br>
+	<div class="cajabsize2">
+		Caja 2
+	</div>
+		<br>
+	<div class="cajaf1">
+		Caja 1
+	</div>
+
+	<div class="cajaf2">
+		Caja 2
+	</div>
+
+	<div class="cajaf3">
+		Caja 3
+	</div><br><br><br><br>
+
+	<a href="">Enlace 1</a>
+	<a href="">Enlace 2</a>
+
+	<ol>
+		<li>Elemento 1</li>
+		<li>Elemento 2</li>
+		<li>Elemento 3</li>
+
+	</ol><br>
+
+	<p>Estoy por encima del contenedor</p>
+	<div class="contenedor">
+		<span class="pruebasabsolute">Pruebas absolute</span>
+	</div>
+	<p class="pruebasposition">Estoy por debajo del contenedor</p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+	<a href="" target="blank">Soy un enlace</a>
+
+	<img src="../../imagenes/catedralma.jpg" class="opacidad">
+	<div class="opacidad2">
+		Texto 1
+	</div>
+
+	<img src="../../imagenes/giraldasev.jpg" class="filtro">
+
+	<img src="../../imagenes/monumentojaen.jpg" class="adaptar">
+
+	<div class="animacion1">
+		
+	</div>
+
+	<div class="transaccion1">
+		
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    let numeros = [];
+    //Posiciones:   0 1 2 3
+    let numeros2 = [5,8,6,9];
+    alert(numeros2)
+    alert(numeros2[1]);
+    numeros2[10] = 85;
+    //Esto me lo pone al final del todo
+    numeros2.push(100);
+    numeros2[0]= 200;
+    alert(numeros2);
+    //alert("Se ha eliminado el mumero: " + numeros2.pop());
+    alert("Se ha eliminado el mumero: " + numeros2.shift());
+    alert(numeros2);
+    numeros2.splice(1,1);
+    alert(numeros2);
+    for(let i=0; i<numeros2.length; i++){
+        alert(numeros2[i]);
+    }
+
+    let nombres = ["Armando", "Lucia", "Nuria", "Jose"];
+    intercambiavalores(0,2);
+    alert(nombres);
+    function intercambiavalores(pos1, pos2){
+        //Vamos a intercambiar los valores de Nuria y Armando
+    //Para ello se siguen 3 pasos
+    //Paso 1: Declaro una variable del mismos tipo del array, y guardo uno de los valores
+    let auxNombre = nombres[0]
+    //Paso 2: En esa posicion la machaco ocn el valor de la otra
+    nombres[0] = nombres[2];
+    //Paso 3: En la otra posicion ponfo el valor de la variable auxiliar
+    nombres[2] = auxNombre;
+    }
+</script>
+</body>
+
+</html>

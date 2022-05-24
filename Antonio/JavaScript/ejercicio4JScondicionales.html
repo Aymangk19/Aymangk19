@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nota = parseInt(prompt("Insertar nota"));
+        if (!(nota >0 && nota < 10)) {
+            alert("Error Nota Incorrecta")
+        }else {
+            if (nota > 0 && nota < 5){
+                alert("SUSPENSO")
+            }  else if (nota == 5 ){
+            alert("SUFICIENTE")
+        } else if (nota > 5 && nota < 8){
+            alert("BIEN")
+        } else if (nota ==8){
+            alert("NOTABLE")
+        } else if (nota > 8 && nota < 10){
+            alert("SOBRESALIENTE")
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nota = parseInt(prompt("Insertar nota"));
+        switch (nota){
+            case 10:
+            case 9:
+                alert ("SOBRESALIENTE")
+             break;
+            case 8:
+                alert("NOTABLE")
+                break;
+            case 7:
+            case 6:
+                alert ("BIEN")
+                 break;
+            case 5:
+                alert("SUFICIENTE")
+                break;
+            case 4:
+            case 0:
+                alert ("SUSPENSO")
+                 break;
+            default:
+                alert("NOTA INCORECTA");
+                break;
+        }
+    </script>
+</body>
+</html>
